@@ -52,3 +52,45 @@ const askData = [
 
 
 ]
+
+let text_h = document.getElementById('ask');
+let a_text = document.getElementById('a_texto');
+let b_text =  document.getElementById('b_texto');
+let c_text = document.getElementById('c_texto');
+let d_text = document.getElementById('d_texto');
+let submit = document.getElementById('submit');
+
+let currentAsk = 0
+
+
+infos()
+
+
+function infos() {
+
+let questionsData = askData[currentAsk];
+
+
+text_h.innerText = questionsData.question;
+a_text.innerText = questionsData.a;
+b_text.innerText = questionsData.b;
+c_text.innerText = questionsData.c;
+d_text.innerText = questionsData.d;
+
+currentAsk++;
+
+}
+
+
+submit.addEventListener('click', () => {
+    currentAsk++;
+
+    if(cuurentAsk < askData.length) {
+
+        infos()
+
+} else {
+    alert('Parabéns vocÊ concluiu')
+}
+     
+})

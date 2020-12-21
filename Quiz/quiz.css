@@ -4,20 +4,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-background-color:#1769aa;
-color: #f50057;
-min-height: 100vh;
+
 
 }
 
+body {
+
+    background-color:#1769aa;
+    color: #f50057;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 .quizcontainer {
+display: flex;
+justify-content: center;
+align-items: center;
+    width: 500px;
+height: 300px;
+background-color: black;
 
-   
-    
-    background-color: white;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0,0.2);
+}
+
+ul,li{
+    margin: 10px 0 ;
+    list-style: none;
+}
+
+button{
+    margin-top: 40px;
+    padding: 10px 10px;
 }
