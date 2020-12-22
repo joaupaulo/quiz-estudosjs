@@ -59,7 +59,6 @@ let b_text =  document.getElementById('b_texto');
 let c_text = document.getElementById('c_texto');
 let d_text = document.getElementById('d_texto');
 let submit = document.getElementById('submit');
-
 let currentAsk = 0
 
 
@@ -81,16 +80,53 @@ currentAsk++;
 
 }
 
+function inputSelc() {
+const inputSelec = document.querySelectorAll(".answer");
+
+inputSelec.forEach((input) => {
+if(input.checked) {
+
+    return input.id;
+
+}
+})
+  
+return undefined
+
+}
+
+
+
+
+
+
 
 submit.addEventListener('click', () => {
-    currentAsk++;
 
-    if(cuurentAsk < askData.length) {
+    let perguntas = inputSelc();
+
+if(perguntas) {
+
+    if(perguntas === askData[currentAsk]) {
+
+    }
+
+}
+
+
+currentAsk++;
+
+    
+    if(currentAsk < askData.length) {
 
         infos()
 
 } else {
     alert('Parabéns vocÊ concluiu')
 }
+
+}
+    
+    
      
 })
